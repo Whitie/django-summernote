@@ -65,11 +65,11 @@ LANG_TO_LOCALE_ALTERNATIVES = {
 SUMMERNOTE_THEME_FILES = {
     'bs3': {
         'base_css': (
-            '//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css',
+            'summernote/bootstrap.min.css',
         ),
         'base_js': (
-            '//code.jquery.com/jquery-3.3.1.min.js',
-            '//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js',
+            'summernote/jquery-3.6.0.min.js',
+            'summernote/bootstrap.min.js',
         ),
         'default_css': (
             'summernote/summernote.min.css',
