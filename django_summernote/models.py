@@ -1,4 +1,5 @@
 from django.db import models
+
 from django_summernote.utils import (
     get_attachment_storage,
     get_attachment_upload_to,
@@ -12,6 +13,9 @@ __all__ = [
 
 
 class AbstractAttachment(models.Model):
+    id = models.BigAutoField(
+        auto_created=True, primary_key=True, serialize=False, verbose_name="ID"
+    )
     name = models.CharField(
         max_length=255,
         blank=True,
