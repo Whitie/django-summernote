@@ -9,8 +9,6 @@ function initSummernote_{{ id_safe }}() {
         var csrftoken = '{{ csrf_token }}';
         var settings = window.parent.settings_{{ id_safe }};
         var $sn = $('#summernote');
-        $(iframe).height(settings.height);
-        $(iframe).width(settings.width);
 {% else %}
         var origin = window.document.getElementById('{{ id }}');
         var csrftoken = getCookie('{{ CSRF_COOKIE_NAME }}');
