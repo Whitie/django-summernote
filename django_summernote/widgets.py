@@ -68,13 +68,12 @@ class SummernoteWidget(SummernoteWidgetBase):
         summernote_settings.update(self.attrs.get("summernote", {}))
 
         html = super().render(name, value, attrs=attrs, **kwargs)
-        attrs = attrs or {}
         final_attrs = self.final_attr(attrs)
         final_attrs.pop("style", None)
         context = {
             "id": attrs["id"],
             "id_safe": attrs["id"].replace("-", "_"),
-            "flat_attrs": flatatt(self.final_attr(attrs)),
+            "flat_attrs": flatatt(final_attrs),
             "settings": json.dumps(summernote_settings),
             "src": reverse(
                 "django_summernote-editor", kwargs={"id": attrs["id"]}
