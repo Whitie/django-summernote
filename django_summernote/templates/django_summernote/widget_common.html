@@ -8,6 +8,7 @@ function initSummernote_{{ id_safe }}() {
         var origin = window.parent.document.getElementById(id);
         var csrftoken = '{{ csrf_token }}';
         var settings = window.parent.settings_{{ id_safe }};
+        settings.width = '100%';
         var $sn = $('#summernote');
 {% else %}
         var origin = window.document.getElementById('{{ id }}');
