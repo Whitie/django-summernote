@@ -160,7 +160,8 @@ class SummernoteUploadAttachment(UserPassesTestMixin, View):
                         {
                             "status": "false",
                             "message": _(
-                                "File size exceeds the limit allowed and cannot be saved"
+                                "File size exceeds the limit allowed "
+                                "and cannot be saved"
                             ),
                         },
                         status=400,
