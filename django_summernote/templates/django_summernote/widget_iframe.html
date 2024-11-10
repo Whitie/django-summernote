@@ -1,6 +1,5 @@
 {{ settings|json_script:"summernote-settings" }}
 <script>
-/*var settings_{{ id_safe }} = {{ settings|safe }}; */
 const settings_{{ id_safe }} = JSON.parse(
   document.getElementById('summernote-settings').textContent
 );
